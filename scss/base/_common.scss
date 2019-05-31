@@ -1,0 +1,130 @@
+body {
+    background-color: $body-background;
+		font-family: $body-font-family;
+		color: $secondary-color;
+}
+
+a {
+  @include link();  
+}
+
+h1 {
+	@include mx-header-size(h1); 
+	font-weight: 900;
+}
+h2, h2 a {
+	@include mx-header-size(h2); 
+	font-family: $header-font-family;
+	font-weight: 600;
+}
+h3 {
+	@include mx-header-size(h3); 
+	font-family: $header-font-family;
+	font-weight: 600;
+}
+h4 {
+	@include mx-header-size(h4); 
+	font-family: $header-font-family;
+	font-weight: 600;
+}
+h5 {
+	@include mx-header-size(h5); 
+	font-family: $header-font-family;
+	font-weight: 600;
+}
+strong {
+	font-family: $header-font-family;
+	font-weight: 600;
+}
+.main-content {
+	img {
+    max-width: 100%;
+    height: auto;
+	}
+p {
+	font-family: $header-font-family;
+	font-weight: 300;
+	a {
+		font-weight: 500;
+	}
+}
+
+blockquote {
+	font-size: rem-calc(18);
+	font-weight: 500;
+	border-left: 2px solid $secondary-color;
+	padding-left: 15px;
+	font-family: $header-font-family;
+	p {
+		font-weight: 500;
+	}
+}
+
+ul,li {
+	font-family: $header-font-family;
+	font-weight: 300;
+}
+ol {
+	ol {
+		list-style-type: lower-alpha;
+		ol {
+			list-style-type: disc;
+		}
+	}
+}
+li {
+	li {
+		li {
+			list-style-type: disc;
+		}
+}
+}
+
+}
+.more-link {
+	padding: 0;
+	a {
+		background-color: $primary-color;
+		color: $secondary-color;
+		text-transform: uppercase;
+		border-radius: 2px;
+		padding: 8px 30px;
+		display: inline-block;
+		margin: 10px 0;
+		font-family: $body-font-family;
+    font-size: 1rem;
+    font-weight: 700 !important;
+		&:hover {
+			background-color: $active-link-bg;
+		}
+	}
+}
+.container {
+	&.row-fluid {
+		max-width: 1600px;
+    padding-left: 30px;
+    padding-right: 30px;
+	}
+}
+#content-area-wrapper {
+	margin-top: 30px;
+	padding-bottom: 30px;
+}
+code {
+	color: $secondary-color;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+}
+
+#content-area-wrapper{
+	.preface-wrapper{
+		#preface{
+			padding: 0 15px;
+		}
+	}
+}
+.path-frontpage{
+	#content-area-wrapper{
+		margin-top: 0px !important;
+	}
+}

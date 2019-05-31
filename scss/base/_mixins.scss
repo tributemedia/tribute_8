@@ -1,0 +1,43 @@
+@function color-palette($key: 'primary') {
+    @return map-get($color-palette, $key);
+  }
+
+  @mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+    // If $mq-breakpoint is a key that exists in
+    // $mq-breakpoints, get and use the value
+    @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+      $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+    }
+    
+    @media screen and (min-width: #{$mq-breakpoint}) {
+      @content;
+    }
+  }
+
+  @function rem-calc($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+  }
+ 
+  @function header-size($breakpoint, $size) {
+    @return rem-calc(map-get(map-get(map-get($header-styles, $breakpoint), $size), "font-size"));
+  }
+  
+
+  @mixin mx-header-size($type){
+    font-size: rem-calc(map-get(map-get(map-get($header-styles, "small"), $type), "font-size"));
+    @include mq(medium){
+      font-size: rem-calc(map-get(map-get(map-get($header-styles, "medium"), $type), "font-size"));
+    }
+  }
+  
+
+  @mixin link() {
+    color: $primary-color;
+    &:hover {
+        color: $primary-color; 
+        text-decoration: none;
+    }
+  }
+
+

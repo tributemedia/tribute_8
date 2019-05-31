@@ -1,0 +1,33 @@
+
+// Make sure the charset is set appropriately
+@charset 'utf-8';
+
+// This is your _settings.scss file where you can override Bootstrap variables.
+// http://foundation.zurb.com/sites/docs/sass.html#the-settings-file
+
+// Prototyping Utilities
+//Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+@import 'base/mixins';
+
+@import 'settings';
+
+
+// Base files
+@import 'base/common';
+@import 'elements/elements';
+
+//Components
+@import 'components/header';
+@import 'components/nav';
+@import 'components/mobilemenu';
+@import 'components/sidebar';
+@import 'components/footer';
+
+
+
+
+

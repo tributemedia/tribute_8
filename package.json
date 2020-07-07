@@ -19,6 +19,6 @@
         "gulp-watch": "^5.0.1"
     },
     "dependencies": {
-        "npm": "^5.7.1"
+        "npm": "^6.14.6"
     }
 }
